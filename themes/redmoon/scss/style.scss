@@ -1,0 +1,261 @@
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+@import 'blockquotes';
+@import 'code';
+@import 'projects';
+@import 'gallery';
+
+
+
+
+* {
+    font-family: $font-family-main;
+    box-sizing: border-box;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-second;
+    font-size: 30px;
+}
+
+h2{
+padding: 2rem 0rem;
+}
+
+h3{
+    padding: 2rem 10rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.main {
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+.header, .footer {
+    flex: 0 0 auto;
+}
+
+p {
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social {
+    padding: 15px;
+}
+
+img {
+    max-width: 100%;
+    padding: 30px 50px;
+}
+
+
+.logo {
+    width: 11%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    top: 250px;
+    position: absolute;
+    z-index: 999;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.footer a {
+    color: #222;
+}
+
+.footer .social {
+    font-size: 2rem;
+}
+
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url('../../../assets/img/Ir7.jpg');
+}
+
+
+body:not(.home) .header {
+    background-image: none;
+}
+
+
+body {
+    background-color: $background-color;
+}
+
+
+.pic-1,.pic-2,.pic-3,.pic-4,.pic-5,.pic-6,.pic-7,.pic-8,.pic-9,.pic-10,.pic-11,.pic12{
+    grid-column: span 1;
+}
+
+
+
+.pic :hover{
+    font-size: larger;
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.pic {
+    width: 100%;
+    height: auto;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+}
+
+.nav{
+    font-family: $font-family-second;
+    font-size: 35px;
+}
+
+.container{
+    padding: 3rem;
+}
+
+
+.landingpage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 35rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    justify-items: stretch;
+}
+
+.landingpage-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    justify-items: stretch;
+}
+
+.landingpage h1 {
+    grid-column: span 3;
+    justify-self: center;
+    text-align: center;
+}
+
+.landingpage-about h1 {
+    grid-column: span 3;
+    justify-self: center;
+    text-align: center;
+}
+
+.box-1{
+    grid-column: span 1;
+}
+
+.box-2{
+    grid-column: span 2;
+}
+
+.box-3{
+    grid-column: span 3;
+}
+
+.box{
+    justify-self: center;
+    text-align: center;
+    color: #ccc;
+    border: 1px solid #ccc;
+    justify-self: stretch;
+    align-self: stretch;
+    justify-content: center;
+    padding: 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    color: $font-alternative-color;
+}
+
+.box-pic-1{
+    background: url('../../../assets/img/b3.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+
+.box-pic-2{
+    background: url('../../../assets/img/Ir1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-3{
+    background: url('../../../assets/img/g2.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-4{
+    background: url('../../../assets/img/a1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-5{
+    background: url('../../../assets/img/d1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-6{
+    background: url('../../../assets/img/me1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+
+.box :hover{
+    font-size: 70px;
+}
+
+

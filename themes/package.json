@@ -1,0 +1,25 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "stylelint \"**/*.scss\"",
+    "style": "sass redmoon/scss/style.scss redmoon/css/style.css --no-source-map",
+    "style-min": "sass redmoon/scss/style.scss redmoon/css/style.min.css --no-source-map --style compressed",
+    "style-dark": "sass redmoon/scss/style-alternative.scss redmoon/css/style-alternative.css --no-source-map",
+    "style-dark-min": "sass redmoon/scss/style-alternative.scss redmoon/css/style-alternative.min.css --no-source-map --style compressed",
+    "style-light": "sass redmoon/scss/style.scss redmoon/css/style.css --no-source-map",
+    "style-light-min": "sass redmoon/scss/style.scss redmoon/css/style.min.css --no-source-map --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

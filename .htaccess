@@ -1,0 +1,40 @@
+RewriteEngine On
+
+# Ignore real files (images, stylesheets etc.)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule (.*) - [L]
+
+# Rewrite requests to .md files in the "content" directory
+RewriteRule ^content/(.*\.md)$ index.php?pico_route=$1 [QSA,L]
+
+
+# Rewrite 1 - For request via www.student.bth.se
+RewriteCond %{HTTP_HOST} ^www\.student\.bth\.se$ [NC]
+RewriteRule ^image/(.*)$ /~majv23/dbwebb-kurser/design/me/kmom11/assets/cimage/img.php?src=$1 [QSA,NC,L]
+
+RewriteCond %{HTTP_HOST} ^www\.student\.bth\.se$ [NC]
+RewriteRule (.*) /~majv23/dbwebb-kurser/design/me/kmom11/index.php/$1 [NC,L]
+
+# Rewrite 2 - For other requests
+RewriteCond %{HTTP_HOST} !^www\.student\.bth\.se$ [NC]
+RewriteRule ^image/(.*)$ assets/cimage/img.php?src=$1 [QSA,NC,L]
+
+# Deny access to internal dirs and files by passing the URL to Pico
+RewriteRule ^(config|content|vendor|CHANGELOG\.md|composer\.(json|lock|phar))(/|$) index.php [L]
+RewriteRule (^\.|/\.)(?!well-known(/|$)) index.php [L]
+
+RewriteCond %{HTTP_HOST} !^www\.student\.bth\.se$ [NC]
+RewriteRule (.*) index.php/$1 [NC,L]
+
+# Enable URL rewriting - default Pico settings
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ index.php [L]
+
+    # Let Pico know about available URL rewriting
+    SetEnv PICO_URL_REWRITING 1
+
+# Prevent file browsing
+Options -Indexes -MultiViews
+

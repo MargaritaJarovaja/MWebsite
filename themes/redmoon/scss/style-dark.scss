@@ -1,0 +1,202 @@
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables.scss';
+@import 'blockquotes.scss';
+@import 'code.scss';
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:ital,wght@0,300;1,900&family=Ubuntu:wght@500&display=swap');
+
+* {
+    font-family: $font-family-main-dark;
+    box-sizing: border-box;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-second-dark;
+    font-size: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: $font-dark-style-color;
+}
+
+.main {
+    flex: 1 0 auto;
+
+}
+
+.header, .footer {
+    flex: 0 0 auto;
+
+}
+
+.nav ul li a{
+    color: $font-dark-style-color;
+}
+
+
+
+p {
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #222;
+}
+
+.social {
+    padding: 15px;
+}
+
+img {
+    max-width: 100%;
+    padding: 30px 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.footer a {
+    color: #222;
+}
+
+.footer .social {
+    font-size: 2rem;
+}
+
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 50%, rgba(255, 255, 255, 0) 100%), url('../../../assets/img/Ir7.jpg');
+
+}
+
+body {
+    background-color: $background-dark-style-color;
+}
+
+* {
+    color: $font-dark-style-color;
+}
+
+.main.landingpage {
+    display: grid;
+}
+
+.main.landingpage h1 {
+    grid-column: span 3;
+    justify-self: center;
+}
+
+.main.landingpage {
+    display: grid;
+    gap: 1em 1em;
+}
+
+.nav ul li{
+    color: $font-dark-style-color;
+}
+
+.box a{
+    color: $font-alternative-color;
+}
+
+.pic-1,.pic-2,.pic-3,.pic-4,.pic-5,.pic-6,.pic-7,.pic-8,.pic-9,.pic-10,.pic-11,.pic12{
+    grid-column: span 1;
+}
+
+.pic :hover{
+    font-size: larger;
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.pic {
+    width: 100%;
+    height: auto;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+}
+
+.box-pic-1{
+    background: url('../../../assets/img/b3.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+
+.box-pic-2{
+    background: url('../../../assets/img/Ir1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-3{
+    background: url('../../../assets/img/g2.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-4{
+    background: url('../../../assets/img/a1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-5{
+    background: url('../../../assets/img/d1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+.box-pic-6{
+    background: url('../../../assets/img/me1.jpg');
+    background-size: cover; /* Растягиваем изображение, чтобы оно полностью покрыло контейнер */
+    background-position: center; /* Центрируем изображение */
+}
+
+.box{
+    justify-self: center;
+    text-align: center;
+    color: #ccc;
+    border: 1px solid #ccc;
+    justify-self: stretch;
+    align-self: stretch;
+    justify-content: center;
+    padding: 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    color: $font-alternative-color;
+}
+

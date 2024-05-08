@@ -1,0 +1,23 @@
+<div class="header" role="banner">
+    <div class="site-header">
+        {% if pages["_meta"].meta.logo %}
+        <div class="logo">
+            <a href="https://www.student.bth.se/~majv23/dbwebb-kurser/design/me/kmom11/">
+                <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="logo" />
+            </a>
+        </div>
+        {% endif %}
+
+    </div>
+    <div class="nav">
+        <div id="nav" role="navigation" tabindex="-1">
+            <ul>
+                {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                    <li{% if page.id==current_page.id %} class="active" {% endif %}>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

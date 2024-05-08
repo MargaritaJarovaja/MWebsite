@@ -1,0 +1,50 @@
+/* gallery.scss */
+.container {
+    padding: 3rem;
+}
+
+.main.landingpage h1 {
+    grid-column: span 3;
+    justify-self: center;
+    text-align: center;
+
+}
+
+
+.pic-1,.pic-2,.pic-3,.pic-4,.pic-5,.pic-6,.pic-7,.pic-8,.pic-9,.pic-10,.pic-11,.pic12{
+    grid-column: span 1;
+}
+
+
+
+.pic :hover{
+    font-size: larger;
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.pic {
+    width: 100%;
+    height: auto;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+}
+
+
+.main.landingpage {
+    display: grid;
+    gap: 1em 1em;
+}
+
+.main.landingpage-gallery {
+    display: grid;
+    gap: 1em 1em;
+}
